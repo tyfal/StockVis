@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LineChartTest_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-dW-slA" customClass="LineChart" customModule="LineChartTest_1" customModuleProvider="target">
+                                <rect key="frame" x="10" y="70" width="355" height="247"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPr-Bt-hTt">
+                                <rect key="frame" x="153.5" y="587" width="68" height="30"/>
+                                <state key="normal" title="Draw Line">
+                                    <color key="titleColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lgd-1z-PbY"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="moM-5c-8ZG">
+                                <rect key="frame" x="125" y="392" width="240" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Vs9-19-eNd"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
+                                    <!--2019-02-18 03:19:14 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="E62-VU-pKJ">
+                                <rect key="frame" x="125" y="482" width="240" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="guo-O6-Xk3"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
+                                    <!--2019-02-18 03:19:14 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AAPL" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPE-wi-G4e">
+                                <rect key="frame" x="165" y="327" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.047193743288516998" green="0.89663010835647583" blue="0.85698229074478149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="eUD-ch-cjm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-vL-DZC">
+                                <rect key="frame" x="10" y="418" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-KE-Lcl">
+                                <rect key="frame" x="10" y="509" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Co. Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-de-4gr">
+                                <rect key="frame" x="10" y="337" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6d8-jE-Nik"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mpJ-dW-slA" secondAttribute="bottom" constant="350" id="6mG-yr-hlE"/>
+                            <constraint firstItem="gFf-de-4gr" firstAttribute="top" secondItem="mpJ-dW-slA" secondAttribute="bottom" constant="20" id="7cq-db-mHJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpJ-dW-slA" secondAttribute="trailing" constant="10" id="9nF-oG-zYo"/>
+                            <constraint firstItem="q92-vL-DZC" firstAttribute="top" secondItem="gFf-de-4gr" secondAttribute="bottom" constant="60" id="B0M-xg-Mde"/>
+                            <constraint firstItem="E62-VU-pKJ" firstAttribute="top" secondItem="moM-5c-8ZG" secondAttribute="bottom" constant="10" id="FVS-VK-uaD"/>
+                            <constraint firstItem="mpJ-dW-slA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="GLx-Db-4Fq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gPr-Bt-hTt" secondAttribute="bottom" constant="50" id="GPA-Ec-WjB"/>
+                            <constraint firstItem="moM-5c-8ZG" firstAttribute="top" secondItem="tPE-wi-G4e" secondAttribute="bottom" constant="20" id="HrZ-g6-LgV"/>
+                            <constraint firstItem="tPE-wi-G4e" firstAttribute="top" secondItem="mpJ-dW-slA" secondAttribute="bottom" constant="20" id="Iwm-Ot-vRo"/>
+                            <constraint firstItem="gPr-Bt-hTt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JvL-Bd-Xfr"/>
+                            <constraint firstItem="gFf-de-4gr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="K6A-Ay-eem"/>
+                            <constraint firstItem="mpJ-dW-slA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="LP4-bd-WWX"/>
+                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="LbT-fD-J3E"/>
+                            <constraint firstAttribute="trailing" secondItem="moM-5c-8ZG" secondAttribute="trailing" constant="10" id="M4H-Xa-520"/>
+                            <constraint firstItem="gFf-de-4gr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="NnY-hV-sST"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E62-VU-pKJ" secondAttribute="trailing" constant="10" id="OCW-Um-GBa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tPE-wi-G4e" secondAttribute="trailing" constant="10" id="Vec-TE-Ddo"/>
+                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="top" secondItem="q92-vL-DZC" secondAttribute="bottom" constant="70" id="YZV-dj-5Fu"/>
+                            <constraint firstItem="gPr-Bt-hTt" firstAttribute="top" secondItem="E62-VU-pKJ" secondAttribute="bottom" constant="10" id="Zqr-UL-y8q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E62-VU-pKJ" secondAttribute="trailing" constant="10" id="aoX-qj-0nF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="moM-5c-8ZG" secondAttribute="trailing" constant="10" id="cCt-JS-Tt3"/>
+                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cc5-gh-x89"/>
+                            <constraint firstItem="moM-5c-8ZG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="daT-E8-pvy"/>
+                            <constraint firstItem="q92-vL-DZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dli-Cm-ESh"/>
+                            <constraint firstItem="E62-VU-pKJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="jFZ-81-YDS"/>
+                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="top" secondItem="q92-vL-DZC" secondAttribute="bottom" constant="70" id="kHE-0U-9ov"/>
+                            <constraint firstItem="gPr-Bt-hTt" firstAttribute="top" secondItem="E62-VU-pKJ" secondAttribute="bottom" constant="25" id="rhY-3Z-JAO"/>
+                            <constraint firstItem="gPr-Bt-hTt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZs-Jx-Oxd"/>
+                            <constraint firstItem="E62-VU-pKJ" firstAttribute="top" secondItem="moM-5c-8ZG" secondAttribute="bottom" constant="20" id="wQn-Hs-pT4"/>
+                            <constraint firstItem="q92-vL-DZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="xep-1r-2yD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fHt-2Z-R4C" appends="YES" id="TQl-ES-RT3"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="endDate" destination="E62-VU-pKJ" id="y29-u1-Sse"/>
+                        <outlet property="lineView" destination="mpJ-dW-slA" id="aZ5-Hi-0tC"/>
+                        <outlet property="startDate" destination="moM-5c-8ZG" id="2I2-L1-iUK"/>
+                        <outlet property="ticker" destination="tPE-wi-G4e" id="Cxq-nJ-mpg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fHt-2Z-R4C">
+                    <connections>
+                        <action selector="tapView:" destination="BYZ-38-t0r" id="5OV-zp-4zY"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
