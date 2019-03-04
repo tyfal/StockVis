@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var scrollData: UIScrollView!
+    @IBOutlet weak var stackData: UIStackView!
     @IBOutlet var screenEdgeRecognizer: UIScreenEdgePanGestureRecognizer!
-        
+    
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var pickerBackdrop: UIView!
     @IBOutlet var pickStockOutlet: UIScreenEdgePanGestureRecognizer!
@@ -20,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var drawLineButton: UIButton!
+    @IBOutlet weak var SECView: WKWebView!
     
     
     @IBOutlet weak var lineView: LineChart!
@@ -64,6 +68,9 @@ class ViewController: UIViewController {
 
     @IBAction func drawLine(_ sender: Any) {
         
+        let myURL = URL(string:"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=\(ticker.text!)&type=10-K")
+        let myRequest = URLRequest(url: myURL!)
+        
         getClose(ticker: ticker.text!, start: startDate.date.toString(dateFormat: "YYYY-MM-dd"), end: endDate.date.toString(dateFormat: "YYYY-MM-dd")) {(data) in
             
             let vals = data.dataset.data
@@ -87,6 +94,8 @@ class ViewController: UIViewController {
                 self.companyLabel.text = "\(self.ticker.text!) Info"
                 
                 self.lineView.drawChart(selectedChart: .line, ySeries: graphVals.reversed(), xLabels: graphLabels.reversed())
+                
+                self.SECView.load(myRequest)
                 
             }
             
@@ -116,6 +125,14 @@ class ViewController: UIViewController {
         
         pickerBackdrop.layer.cornerRadius = 25
         
+        lineView.layer.zPosition = 1
+        
+        SECView.layer.zPosition = 1
+        
+        scrollData.layer.zPosition = 1
+        
+        stackData.layer.zPosition = 1
+        
     }
     
     
@@ -125,7 +142,7 @@ class ViewController: UIViewController {
         
         UIView.transition(with: pickerBackdrop, duration: 0.5, options: .curveEaseInOut, animations: {
             self.pickerBackdrop.alpha = 0.7
-            self.pickerBackdrop.frame = CGRect(x: -65.0, y: 20.0, width: 60.0, height: self.lineView.frame.height - 40.0)
+            self.pickerBackdrop.frame = CGRect(x: -45.0, y: 20.0, width: 60.0, height: self.lineView.frame.height + 20)
             self.startDate.alpha = 0.0
             self.endDate.alpha = 0.0
         
@@ -144,7 +161,7 @@ class ViewController: UIViewController {
         
         UIView.transition(with: pickerBackdrop, duration: 0.5, options: .curveEaseInOut, animations: {
             self.pickerBackdrop.alpha = 0.85
-            self.pickerBackdrop.frame = CGRect(x: -65.0, y: 20.0, width: self.lineView.frame.width, height: self.lineView.frame.height - 40.0)
+            self.pickerBackdrop.frame = CGRect(x: -45.0, y: 20.0, width: self.lineView.frame.width, height: self.lineView.frame.height + 20)
             self.startDate.alpha = 1.0
             self.endDate.alpha = 1.0
         })

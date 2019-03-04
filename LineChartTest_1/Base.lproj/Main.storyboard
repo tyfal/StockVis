@@ -15,78 +15,107 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LineChartTest_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-dW-slA" customClass="LineChart" customModule="LineChartTest_1" customModuleProvider="target">
-                                <rect key="frame" x="40" y="70" width="325" height="577"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJK-SO-48W">
+                                <rect key="frame" x="0.0" y="45.5" width="375" height="1054.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRq-yy-m78">
-                                        <rect key="frame" x="-41" y="-7" width="360" height="590"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4f0-vQ-sEo">
+                                        <rect key="frame" x="20" y="0.0" width="325" height="1020"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AAPL" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPE-wi-G4e">
-                                                <rect key="frame" x="184" y="80" width="57" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.047193743288516998" green="0.89663010835647583" blue="0.85698229074478149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Co. Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-de-4gr">
-                                                <rect key="frame" x="98" y="85" width="78" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-vL-DZC">
-                                                <rect key="frame" x="139" y="159" width="78" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="moM-5c-8ZG">
-                                                <rect key="frame" x="55" y="188" width="246" height="96"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
-                                                    <!--2019-02-18 03:19:14 +0000-->
-                                                </date>
-                                            </datePicker>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-KE-Lcl">
-                                                <rect key="frame" x="143" y="316" width="70" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPr-Bt-hTt">
-                                                <rect key="frame" x="145" y="469" width="68" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Draw Line">
-                                                    <color key="titleColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="drawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lgd-1z-PbY"/>
-                                                </connections>
-                                            </button>
-                                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="E62-VU-pKJ">
-                                                <rect key="frame" x="55" y="345" width="246" height="80"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
-                                                    <!--2019-02-18 03:19:14 +0000-->
-                                                </date>
-                                            </datePicker>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-dW-slA" customClass="LineChart" customModule="LineChartTest_1" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="325" height="500"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="500" id="HEm-4G-ooM"/>
+                                                </constraints>
+                                            </view>
+                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npS-Dh-OLh">
+                                                <rect key="frame" x="0.0" y="510" width="325" height="510"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.46148556470870972" green="0.61073940992355347" blue="0.67258572578430176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="325" id="M88-W5-9dm"/>
+                                            <constraint firstAttribute="height" constant="1020" id="c8k-Ff-LQj"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="4f0-vQ-sEo" firstAttribute="leading" secondItem="sJK-SO-48W" secondAttribute="leading" constant="20" id="5NQ-aF-jjw"/>
+                                    <constraint firstItem="4f0-vQ-sEo" firstAttribute="top" secondItem="sJK-SO-48W" secondAttribute="top" id="a1I-l6-DAt"/>
+                                    <constraint firstAttribute="trailing" secondItem="4f0-vQ-sEo" secondAttribute="trailing" id="baz-bd-5vP"/>
+                                    <constraint firstAttribute="bottom" secondItem="4f0-vQ-sEo" secondAttribute="bottom" id="bu3-36-s5L"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRq-yy-m78">
+                                <rect key="frame" x="7" y="38" width="360" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AAPL" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPE-wi-G4e">
+                                        <rect key="frame" x="184" y="80" width="57" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.047193743288516998" green="0.89663010835647583" blue="0.85698229074478149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Co. Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-de-4gr">
+                                        <rect key="frame" x="98" y="85" width="78" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-vL-DZC">
+                                        <rect key="frame" x="139" y="159" width="78" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="moM-5c-8ZG">
+                                        <rect key="frame" x="55" y="188" width="246" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
+                                            <!--2019-02-18 03:19:14 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-KE-Lcl">
+                                        <rect key="frame" x="143" y="316" width="70" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPr-Bt-hTt">
+                                        <rect key="frame" x="145" y="469" width="68" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Draw Line">
+                                            <color key="titleColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lgd-1z-PbY"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="E62-VU-pKJ">
+                                        <rect key="frame" x="55" y="345" width="246" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
+                                            <!--2019-02-18 03:19:14 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46148556470870972" green="0.61073940992355347" blue="0.67258572578430176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Company Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu0-TH-yG4">
-                                <rect key="frame" x="40" y="25" width="295" height="40"/>
+                                <rect key="frame" x="40" y="25" width="171" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -95,17 +124,13 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpJ-dW-slA" secondAttribute="trailing" constant="20" id="08D-mQ-H6E"/>
-                            <constraint firstItem="mpJ-dW-slA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4Lw-lG-A6t"/>
-                            <constraint firstItem="mpJ-dW-slA" firstAttribute="top" secondItem="vu0-TH-yG4" secondAttribute="bottom" constant="5" id="Kni-ir-25v"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vu0-TH-yG4" secondAttribute="trailing" constant="40" id="N60-Rr-Uiz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpJ-dW-slA" secondAttribute="trailing" constant="40" id="OyY-a6-ev4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mpJ-dW-slA" secondAttribute="bottom" constant="20" id="PsJ-gK-3ni"/>
+                            <constraint firstItem="sJK-SO-48W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="12v-Vg-beD"/>
+                            <constraint firstItem="sJK-SO-48W" firstAttribute="top" secondItem="vu0-TH-yG4" secondAttribute="bottom" id="DPT-US-PbH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sJK-SO-48W" secondAttribute="bottom" id="L0H-bb-1w1"/>
+                            <constraint firstItem="sJK-SO-48W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OhZ-Er-Qs3"/>
+                            <constraint firstItem="sJK-SO-48W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PVN-ct-iVg"/>
                             <constraint firstItem="vu0-TH-yG4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="fCf-oq-mUn"/>
-                            <constraint firstItem="mpJ-dW-slA" firstAttribute="top" secondItem="vu0-TH-yG4" secondAttribute="bottom" constant="5" id="kHb-uQ-vJG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpJ-dW-slA" secondAttribute="trailing" constant="10" id="rgr-4G-0RO"/>
                             <constraint firstItem="vu0-TH-yG4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="s0a-Bp-Nzg"/>
-                            <constraint firstItem="mpJ-dW-slA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="uKy-gJ-A9B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -114,7 +139,9 @@
                             <outletCollection property="gestureRecognizers" destination="djy-eL-2QI" appends="YES" id="rps-aa-21V"/>
                         </connections>
                     </view>
+                    <size key="freeformSize" width="375" height="1100"/>
                     <connections>
+                        <outlet property="SECView" destination="npS-Dh-OLh" id="aDR-PM-rdF"/>
                         <outlet property="companyLabel" destination="vu0-TH-yG4" id="QOO-Ly-y1V"/>
                         <outlet property="donePickingOutlet" destination="djy-eL-2QI" id="ZgA-zk-Z6v"/>
                         <outlet property="drawLineButton" destination="gPr-Bt-hTt" id="z1h-ua-JGt"/>
@@ -124,6 +151,8 @@
                         <outlet property="pickStockOutlet" destination="LkB-RA-Zts" id="nog-iz-SKG"/>
                         <outlet property="pickerBackdrop" destination="pRq-yy-m78" id="FoH-4J-89P"/>
                         <outlet property="screenEdgeRecognizer" destination="LkB-RA-Zts" id="wtg-0q-63Z"/>
+                        <outlet property="scrollData" destination="sJK-SO-48W" id="ctT-08-lzw"/>
+                        <outlet property="stackData" destination="4f0-vQ-sEo" id="755-0u-P6l"/>
                         <outlet property="startDate" destination="moM-5c-8ZG" id="2I2-L1-iUK"/>
                         <outlet property="startDateLabel" destination="q92-vL-DZC" id="tht-kf-UPf"/>
                         <outlet property="ticker" destination="tPE-wi-G4e" id="Cxq-nJ-mpg"/>
@@ -149,7 +178,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-746" y="-138"/>
+            <point key="canvasLocation" x="-746.39999999999998" y="-138.53073463268368"/>
         </scene>
     </scenes>
 </document>
