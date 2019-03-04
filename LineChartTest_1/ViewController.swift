@@ -10,6 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var screenEdgeRecognizer: UIScreenEdgePanGestureRecognizer!
+        
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var pickerBackdrop: UIView!
+    @IBOutlet var pickStockOutlet: UIScreenEdgePanGestureRecognizer!
+    @IBOutlet var donePickingOutlet: UIScreenEdgePanGestureRecognizer!
+    @IBOutlet weak var tickerLabel: UILabel!
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var drawLineButton: UIButton!
+    
+    
     @IBOutlet weak var lineView: LineChart!
     
     @IBOutlet weak var ticker: UITextField!
@@ -31,13 +43,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        formatView()
+        
+        displayPicker()
+
+    }
+    
+    @IBAction func pickStock(_ sender: Any) {
+        
+        displayPicker()
+        
+    }
+    
+    @IBAction func donePickingStock(_ sender: Any) {
+        
+        hidePicker()
+        
     }
 
     @IBAction func drawLine(_ sender: Any) {
-    
-        // lineView.drawChart(selectedChart: .line, ySeries: [7.0, 2.0, 4.0, 3.0, 4.0, 6.0, 4.0, 3.0, 1.0, 12.0, 10.0])
-        
-        
         
         getClose(ticker: ticker.text!, start: startDate.date.toString(dateFormat: "YYYY-MM-dd"), end: endDate.date.toString(dateFormat: "YYYY-MM-dd")) {(data) in
             
@@ -57,12 +82,77 @@ class ViewController: UIViewController {
             
             DispatchQueue.main.async {
                 
+                self.hidePicker()
+                
+                self.companyLabel.text = "\(self.ticker.text!) Info"
+                
                 self.lineView.drawChart(selectedChart: .line, ySeries: graphVals.reversed(), xLabels: graphLabels.reversed())
                 
             }
             
         }
     
+    }
+    
+    func formatView() {
+        
+        pickerBackdrop.clipsToBounds = true
+        
+        ticker.layer.zPosition = 3
+        
+        startDate.layer.zPosition = 3
+        
+        endDate.layer.zPosition = 3
+        
+        tickerLabel.layer.zPosition = 3
+        
+        startDateLabel.layer.zPosition = 3
+        
+        endDateLabel.layer.zPosition = 3
+        
+        drawLineButton.layer.zPosition = 3
+        
+        pickerBackdrop.layer.zPosition = 2
+        
+        pickerBackdrop.layer.cornerRadius = 25
+        
+    }
+    
+    
+    func hidePicker() {
+        
+        print("done picking yaaa!!!")
+        
+        UIView.transition(with: pickerBackdrop, duration: 0.5, options: .curveEaseInOut, animations: {
+            self.pickerBackdrop.alpha = 0.7
+            self.pickerBackdrop.frame = CGRect(x: -65.0, y: 20.0, width: 60.0, height: self.lineView.frame.height - 40.0)
+            self.startDate.alpha = 0.0
+            self.endDate.alpha = 0.0
+        
+        })
+        
+        pickStockOutlet.isEnabled = true
+        
+        donePickingOutlet.isEnabled = false
+        
+    }
+    
+    
+    func displayPicker() {
+        
+        print("picking stock yaaa!!!")
+        
+        UIView.transition(with: pickerBackdrop, duration: 0.5, options: .curveEaseInOut, animations: {
+            self.pickerBackdrop.alpha = 0.85
+            self.pickerBackdrop.frame = CGRect(x: -65.0, y: 20.0, width: self.lineView.frame.width, height: self.lineView.frame.height - 40.0)
+            self.startDate.alpha = 1.0
+            self.endDate.alpha = 1.0
+        })
+        
+        pickStockOutlet.isEnabled = false
+        
+        donePickingOutlet.isEnabled = true
+        
     }
     
     

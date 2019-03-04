@@ -19,111 +19,115 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-dW-slA" customClass="LineChart" customModule="LineChartTest_1" customModuleProvider="target">
-                                <rect key="frame" x="10" y="70" width="355" height="247"/>
+                                <rect key="frame" x="40" y="70" width="325" height="577"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRq-yy-m78">
+                                        <rect key="frame" x="-41" y="-7" width="360" height="590"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AAPL" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPE-wi-G4e">
+                                                <rect key="frame" x="184" y="80" width="57" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.047193743288516998" green="0.89663010835647583" blue="0.85698229074478149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Co. Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-de-4gr">
+                                                <rect key="frame" x="98" y="85" width="78" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-vL-DZC">
+                                                <rect key="frame" x="139" y="159" width="78" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="moM-5c-8ZG">
+                                                <rect key="frame" x="55" y="188" width="246" height="96"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
+                                                    <!--2019-02-18 03:19:14 +0000-->
+                                                </date>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-KE-Lcl">
+                                                <rect key="frame" x="143" y="316" width="70" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPr-Bt-hTt">
+                                                <rect key="frame" x="145" y="469" width="68" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Draw Line">
+                                                    <color key="titleColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="drawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lgd-1z-PbY"/>
+                                                </connections>
+                                            </button>
+                                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="E62-VU-pKJ">
+                                                <rect key="frame" x="55" y="345" width="246" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
+                                                    <!--2019-02-18 03:19:14 +0000-->
+                                                </date>
+                                            </datePicker>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.46148556470870972" green="0.61073940992355347" blue="0.67258572578430176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPr-Bt-hTt">
-                                <rect key="frame" x="153.5" y="587" width="68" height="30"/>
-                                <state key="normal" title="Draw Line">
-                                    <color key="titleColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </state>
-                                <connections>
-                                    <action selector="drawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lgd-1z-PbY"/>
-                                </connections>
-                            </button>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="moM-5c-8ZG">
-                                <rect key="frame" x="125" y="392" width="240" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Vs9-19-eNd"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
-                                    <!--2019-02-18 03:19:14 +0000-->
-                                </date>
-                            </datePicker>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="E62-VU-pKJ">
-                                <rect key="frame" x="125" y="482" width="240" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="guo-O6-Xk3"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="572152754.58962405">
-                                    <!--2019-02-18 03:19:14 +0000-->
-                                </date>
-                            </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AAPL" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPE-wi-G4e">
-                                <rect key="frame" x="165" y="327" width="200" height="30"/>
-                                <color key="backgroundColor" red="0.047193743288516998" green="0.89663010835647583" blue="0.85698229074478149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="eUD-ch-cjm"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-vL-DZC">
-                                <rect key="frame" x="10" y="418" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Company Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu0-TH-yG4">
+                                <rect key="frame" x="40" y="25" width="295" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-KE-Lcl">
-                                <rect key="frame" x="10" y="509" width="70" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Co. Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-de-4gr">
-                                <rect key="frame" x="10" y="337" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.96804600954055786" green="0.98039668798446655" blue="0.99247008562088013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6d8-jE-Nik"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mpJ-dW-slA" secondAttribute="bottom" constant="350" id="6mG-yr-hlE"/>
-                            <constraint firstItem="gFf-de-4gr" firstAttribute="top" secondItem="mpJ-dW-slA" secondAttribute="bottom" constant="20" id="7cq-db-mHJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpJ-dW-slA" secondAttribute="trailing" constant="10" id="9nF-oG-zYo"/>
-                            <constraint firstItem="q92-vL-DZC" firstAttribute="top" secondItem="gFf-de-4gr" secondAttribute="bottom" constant="60" id="B0M-xg-Mde"/>
-                            <constraint firstItem="E62-VU-pKJ" firstAttribute="top" secondItem="moM-5c-8ZG" secondAttribute="bottom" constant="10" id="FVS-VK-uaD"/>
-                            <constraint firstItem="mpJ-dW-slA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="GLx-Db-4Fq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gPr-Bt-hTt" secondAttribute="bottom" constant="50" id="GPA-Ec-WjB"/>
-                            <constraint firstItem="moM-5c-8ZG" firstAttribute="top" secondItem="tPE-wi-G4e" secondAttribute="bottom" constant="20" id="HrZ-g6-LgV"/>
-                            <constraint firstItem="tPE-wi-G4e" firstAttribute="top" secondItem="mpJ-dW-slA" secondAttribute="bottom" constant="20" id="Iwm-Ot-vRo"/>
-                            <constraint firstItem="gPr-Bt-hTt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JvL-Bd-Xfr"/>
-                            <constraint firstItem="gFf-de-4gr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="K6A-Ay-eem"/>
-                            <constraint firstItem="mpJ-dW-slA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="LP4-bd-WWX"/>
-                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="LbT-fD-J3E"/>
-                            <constraint firstAttribute="trailing" secondItem="moM-5c-8ZG" secondAttribute="trailing" constant="10" id="M4H-Xa-520"/>
-                            <constraint firstItem="gFf-de-4gr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="NnY-hV-sST"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E62-VU-pKJ" secondAttribute="trailing" constant="10" id="OCW-Um-GBa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tPE-wi-G4e" secondAttribute="trailing" constant="10" id="Vec-TE-Ddo"/>
-                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="top" secondItem="q92-vL-DZC" secondAttribute="bottom" constant="70" id="YZV-dj-5Fu"/>
-                            <constraint firstItem="gPr-Bt-hTt" firstAttribute="top" secondItem="E62-VU-pKJ" secondAttribute="bottom" constant="10" id="Zqr-UL-y8q"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E62-VU-pKJ" secondAttribute="trailing" constant="10" id="aoX-qj-0nF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="moM-5c-8ZG" secondAttribute="trailing" constant="10" id="cCt-JS-Tt3"/>
-                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cc5-gh-x89"/>
-                            <constraint firstItem="moM-5c-8ZG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="daT-E8-pvy"/>
-                            <constraint firstItem="q92-vL-DZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dli-Cm-ESh"/>
-                            <constraint firstItem="E62-VU-pKJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="jFZ-81-YDS"/>
-                            <constraint firstItem="I4a-KE-Lcl" firstAttribute="top" secondItem="q92-vL-DZC" secondAttribute="bottom" constant="70" id="kHE-0U-9ov"/>
-                            <constraint firstItem="gPr-Bt-hTt" firstAttribute="top" secondItem="E62-VU-pKJ" secondAttribute="bottom" constant="25" id="rhY-3Z-JAO"/>
-                            <constraint firstItem="gPr-Bt-hTt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZs-Jx-Oxd"/>
-                            <constraint firstItem="E62-VU-pKJ" firstAttribute="top" secondItem="moM-5c-8ZG" secondAttribute="bottom" constant="20" id="wQn-Hs-pT4"/>
-                            <constraint firstItem="q92-vL-DZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="xep-1r-2yD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpJ-dW-slA" secondAttribute="trailing" constant="20" id="08D-mQ-H6E"/>
+                            <constraint firstItem="mpJ-dW-slA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4Lw-lG-A6t"/>
+                            <constraint firstItem="mpJ-dW-slA" firstAttribute="top" secondItem="vu0-TH-yG4" secondAttribute="bottom" constant="5" id="Kni-ir-25v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vu0-TH-yG4" secondAttribute="trailing" constant="40" id="N60-Rr-Uiz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpJ-dW-slA" secondAttribute="trailing" constant="40" id="OyY-a6-ev4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mpJ-dW-slA" secondAttribute="bottom" constant="20" id="PsJ-gK-3ni"/>
+                            <constraint firstItem="vu0-TH-yG4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="fCf-oq-mUn"/>
+                            <constraint firstItem="mpJ-dW-slA" firstAttribute="top" secondItem="vu0-TH-yG4" secondAttribute="bottom" constant="5" id="kHb-uQ-vJG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpJ-dW-slA" secondAttribute="trailing" constant="10" id="rgr-4G-0RO"/>
+                            <constraint firstItem="vu0-TH-yG4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="s0a-Bp-Nzg"/>
+                            <constraint firstItem="mpJ-dW-slA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="uKy-gJ-A9B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="fHt-2Z-R4C" appends="YES" id="TQl-ES-RT3"/>
+                            <outletCollection property="gestureRecognizers" destination="LkB-RA-Zts" appends="YES" id="zGP-l3-vIU"/>
+                            <outletCollection property="gestureRecognizers" destination="djy-eL-2QI" appends="YES" id="rps-aa-21V"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="companyLabel" destination="vu0-TH-yG4" id="QOO-Ly-y1V"/>
+                        <outlet property="donePickingOutlet" destination="djy-eL-2QI" id="ZgA-zk-Z6v"/>
+                        <outlet property="drawLineButton" destination="gPr-Bt-hTt" id="z1h-ua-JGt"/>
                         <outlet property="endDate" destination="E62-VU-pKJ" id="y29-u1-Sse"/>
+                        <outlet property="endDateLabel" destination="I4a-KE-Lcl" id="0rf-wK-hz1"/>
                         <outlet property="lineView" destination="mpJ-dW-slA" id="aZ5-Hi-0tC"/>
+                        <outlet property="pickStockOutlet" destination="LkB-RA-Zts" id="nog-iz-SKG"/>
+                        <outlet property="pickerBackdrop" destination="pRq-yy-m78" id="FoH-4J-89P"/>
+                        <outlet property="screenEdgeRecognizer" destination="LkB-RA-Zts" id="wtg-0q-63Z"/>
                         <outlet property="startDate" destination="moM-5c-8ZG" id="2I2-L1-iUK"/>
+                        <outlet property="startDateLabel" destination="q92-vL-DZC" id="tht-kf-UPf"/>
                         <outlet property="ticker" destination="tPE-wi-G4e" id="Cxq-nJ-mpg"/>
+                        <outlet property="tickerLabel" destination="gFf-de-4gr" id="XGm-ZF-uxe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,8 +136,20 @@
                         <action selector="tapView:" destination="BYZ-38-t0r" id="5OV-zp-4zY"/>
                     </connections>
                 </tapGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="LkB-RA-Zts">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="pickStock:" destination="BYZ-38-t0r" id="ztH-du-CvG"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="djy-eL-2QI">
+                    <rectEdge key="edges" right="YES"/>
+                    <connections>
+                        <action selector="donePickingStock:" destination="BYZ-38-t0r" id="MaC-PM-Cfq"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-746" y="-138"/>
         </scene>
     </scenes>
 </document>
