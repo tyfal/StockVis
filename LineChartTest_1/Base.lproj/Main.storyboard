@@ -15,26 +15,40 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LineChartTest_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1430"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJK-SO-48W">
-                                <rect key="frame" x="0.0" y="45.5" width="375" height="1054.5"/>
+                                <rect key="frame" x="0.0" y="65.5" width="375" height="1364.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4f0-vQ-sEo">
-                                        <rect key="frame" x="20" y="0.0" width="325" height="1020"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4f0-vQ-sEo">
+                                        <rect key="frame" x="30" y="0.0" width="325" height="1340"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-dW-slA" customClass="LineChart" customModule="LineChartTest_1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="325" height="500"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="325" height="300"/>
+                                                <color key="backgroundColor" red="0.76454124236191512" green="0.98456196674940488" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="500" id="HEm-4G-ooM"/>
+                                                    <constraint firstAttribute="height" constant="300" id="GIF-ai-l6w"/>
                                                 </constraints>
                                             </view>
                                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npS-Dh-OLh">
-                                                <rect key="frame" x="0.0" y="510" width="325" height="510"/>
-                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="320" width="325" height="500"/>
+                                                <color key="backgroundColor" red="0.76454124239999999" green="0.98456196669999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="500" id="MqD-4x-jLw"/>
+                                                </constraints>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgu-Qy-uZL">
+                                                <rect key="frame" x="0.0" y="840" width="325" height="500"/>
+                                                <color key="backgroundColor" red="0.76454124239999999" green="0.98456196669999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="500" id="Ahv-L2-chZ"/>
+                                                </constraints>
                                                 <wkWebViewConfiguration key="configuration">
                                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                     <wkPreferences key="preferences"/>
@@ -42,16 +56,16 @@
                                             </wkWebView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="325" id="M88-W5-9dm"/>
-                                            <constraint firstAttribute="height" constant="1020" id="c8k-Ff-LQj"/>
+                                            <constraint firstAttribute="width" constant="325" id="A0Q-8W-o5z"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="4f0-vQ-sEo" firstAttribute="leading" secondItem="sJK-SO-48W" secondAttribute="leading" constant="20" id="5NQ-aF-jjw"/>
-                                    <constraint firstItem="4f0-vQ-sEo" firstAttribute="top" secondItem="sJK-SO-48W" secondAttribute="top" id="a1I-l6-DAt"/>
-                                    <constraint firstAttribute="trailing" secondItem="4f0-vQ-sEo" secondAttribute="trailing" id="baz-bd-5vP"/>
-                                    <constraint firstAttribute="bottom" secondItem="4f0-vQ-sEo" secondAttribute="bottom" id="bu3-36-s5L"/>
+                                    <constraint firstAttribute="trailing" secondItem="4f0-vQ-sEo" secondAttribute="trailing" constant="20" id="1jD-nb-LeY"/>
+                                    <constraint firstItem="4f0-vQ-sEo" firstAttribute="top" secondItem="sJK-SO-48W" secondAttribute="top" id="3au-BQ-V7M"/>
+                                    <constraint firstAttribute="bottom" secondItem="4f0-vQ-sEo" secondAttribute="bottom" constant="21" id="cBy-Kh-PQv"/>
+                                    <constraint firstItem="4f0-vQ-sEo" firstAttribute="leading" secondItem="sJK-SO-48W" secondAttribute="leading" constant="30" id="cuh-yg-wyU"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRq-yy-m78">
@@ -115,22 +129,25 @@
                                 <color key="backgroundColor" red="0.46148556470870972" green="0.61073940992355347" blue="0.67258572578430176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Company Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu0-TH-yG4">
-                                <rect key="frame" x="40" y="25" width="171" height="20.5"/>
+                                <rect key="frame" x="30" y="25" width="325" height="20.5"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="uty-BK-flK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="sJK-SO-48W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="12v-Vg-beD"/>
-                            <constraint firstItem="sJK-SO-48W" firstAttribute="top" secondItem="vu0-TH-yG4" secondAttribute="bottom" id="DPT-US-PbH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sJK-SO-48W" secondAttribute="bottom" id="L0H-bb-1w1"/>
-                            <constraint firstItem="sJK-SO-48W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OhZ-Er-Qs3"/>
-                            <constraint firstItem="sJK-SO-48W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PVN-ct-iVg"/>
+                            <constraint firstItem="sJK-SO-48W" firstAttribute="top" secondItem="vu0-TH-yG4" secondAttribute="bottom" constant="20" id="N8h-XG-pyg"/>
+                            <constraint firstItem="sJK-SO-48W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TLa-jt-oGf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sJK-SO-48W" secondAttribute="bottom" id="WQR-kv-se5"/>
+                            <constraint firstItem="sJK-SO-48W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aIr-E7-h5q"/>
                             <constraint firstItem="vu0-TH-yG4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="fCf-oq-mUn"/>
-                            <constraint firstItem="vu0-TH-yG4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="s0a-Bp-Nzg"/>
+                            <constraint firstItem="vu0-TH-yG4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="p2R-iF-S1s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -139,8 +156,9 @@
                             <outletCollection property="gestureRecognizers" destination="djy-eL-2QI" appends="YES" id="rps-aa-21V"/>
                         </connections>
                     </view>
-                    <size key="freeformSize" width="375" height="1100"/>
+                    <size key="freeformSize" width="375" height="1430"/>
                     <connections>
+                        <outlet property="CNNView" destination="bgu-Qy-uZL" id="ZFy-Nh-v0F"/>
                         <outlet property="SECView" destination="npS-Dh-OLh" id="aDR-PM-rdF"/>
                         <outlet property="companyLabel" destination="vu0-TH-yG4" id="QOO-Ly-y1V"/>
                         <outlet property="donePickingOutlet" destination="djy-eL-2QI" id="ZgA-zk-Z6v"/>

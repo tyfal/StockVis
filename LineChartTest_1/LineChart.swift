@@ -215,7 +215,7 @@ class LineChart: UIView {
     
     func enableTouch(use context: CGContext) {
         
-        label = UILabel(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: 20))
+        label = UILabel(frame: CGRect(x: 5, y: 2, width: bounds.size.width, height: 20))
         
         let pan = UIPanGestureRecognizer(target: self, action: #selector(LineChart.handlePan(_:)))
         
