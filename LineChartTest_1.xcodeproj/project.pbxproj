@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		635A4698221A5764009F8E48 /* GetClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A4697221A5764009F8E48 /* GetClose.swift */; };
+		635EAA4822346D1A0043A48B /* SECFilings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EAA4722346D1A0043A48B /* SECFilings.swift */; };
+		637D86222234A40F007D61ED /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637D86212234A40F007D61ED /* NewsView.swift */; };
 		63B57525221A41D90033C90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B57524221A41D90033C90C /* AppDelegate.swift */; };
 		63B57527221A41D90033C90C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B57526221A41D90033C90C /* ViewController.swift */; };
 		63B5752A221A41D90033C90C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B57528221A41D90033C90C /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		635A4697221A5764009F8E48 /* GetClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClose.swift; sourceTree = "<group>"; };
+		635EAA4722346D1A0043A48B /* SECFilings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SECFilings.swift; sourceTree = "<group>"; };
+		637D86212234A40F007D61ED /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		63B57521221A41D90033C90C /* LineChartTest_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineChartTest_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B57524221A41D90033C90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B57526221A41D90033C90C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +64,10 @@
 			children = (
 				63B57524221A41D90033C90C /* AppDelegate.swift */,
 				63B57526221A41D90033C90C /* ViewController.swift */,
+				637D86212234A40F007D61ED /* NewsView.swift */,
 				63B57528221A41D90033C90C /* Main.storyboard */,
 				63B57536221A42B30033C90C /* LineChart.swift */,
+				635EAA4722346D1A0043A48B /* SECFilings.swift */,
 				635A4697221A5764009F8E48 /* GetClose.swift */,
 				63B5752B221A41DC0033C90C /* Assets.xcassets */,
 				63B5752D221A41DC0033C90C /* LaunchScreen.storyboard */,
@@ -143,6 +149,8 @@
 			files = (
 				63B57527221A41D90033C90C /* ViewController.swift in Sources */,
 				63B57525221A41D90033C90C /* AppDelegate.swift in Sources */,
+				635EAA4822346D1A0043A48B /* SECFilings.swift in Sources */,
+				637D86222234A40F007D61ED /* NewsView.swift in Sources */,
 				63B57537221A42B30033C90C /* LineChart.swift in Sources */,
 				635A4698221A5764009F8E48 /* GetClose.swift in Sources */,
 			);

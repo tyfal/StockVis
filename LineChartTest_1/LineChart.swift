@@ -62,20 +62,6 @@ class LineChart: UIView {
         
         drawSeries(use: currentContext, ySeries: series)
         
-        // enableCoordinates(use: currentContext, ySeries: series, xSereis: dates)
-        /*
-        ballView = createBallView()
-        ballView.center = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
-        endOfLineAnchor = CGPoint(x: bounds.size.width / 2, y: bounds.size.height * 0.8)
-        
-        lineLayer.strokeColor = UIColor.blue.cgColor
-        lineLayer.path = pathFromBallToAnchor()
-        self.layer.addSublayer(lineLayer)
-        self.addSubview(ballView)
-        */
-        // recognizer = UIPanGestureRecognizer(target: ballView, action: Selector(("didPanBall:")))
-        // ballView.addGestureRecognizer(recognizer)
-        
         enableTouch(use: currentContext)
         
     }
@@ -304,14 +290,8 @@ class LineChart: UIView {
         ball.layer.masksToBounds = true
         return ball
     }
-    /*
-    func createLineFrom(start: CGPoint, to end: CGPoint) {
-        let xDist = Double(start.x - end.x)
-        let yDist = Double(start.y - end.y)
-        let distance = sqrt(xDist*xDist - yDist*yDist)
-        createVerticalLineThatStartsAt(start: start, withHeight: distance)
-    }
-    */
+    
+    
     func createVerticalLineThatStartsAt(start: CGPoint, withHeight height: Double) -> UIView {
         let rect = CGRect(origin: start, size: CGSize(width: 1.0, height: height))
         //        var x = CGRect(origin: start, size: CGSize(width: 1, height: height))
